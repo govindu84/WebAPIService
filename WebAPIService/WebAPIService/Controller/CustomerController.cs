@@ -8,21 +8,28 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebAPIService.Controller
 {
     [Route("api/[controller]")]
-    [ApiController]
     public class CustomerController : ControllerBase
     {
-        // GET: api/Customer
+        //GET: api/Customer
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Customer/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        // GET: api/Customer/MultiAction
+        [Route("[Action]")]
+        [ActionName("MultiAction")] //custom name to action
+        [AcceptVerbs("POST", "GET")] //Accepting multiple verbs
+        public string MultiRequestHAndler()
         {
-            return "value";
+            return $"value of id ";
+        }
+
+        [HttpGet("{id:int}/{value}")] //Adding int constarin to id
+        public string Get(int id, string value)
+        {
+            return $"value of id {id} and value {value}";
         }
 
         // POST: api/Customer
@@ -38,7 +45,7 @@ namespace WebAPIService.Controller
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id?}")] //Adding optional id
         public void Delete(int id)
         {
         }

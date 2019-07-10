@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -21,21 +22,28 @@ namespace WebAPIService.Controller
         [Route("[Action]")]
         [ActionName("MultiAction")] //custom name to action
         [AcceptVerbs("POST", "GET")] //Accepting multiple verbs
-        public string MultiRequestHAndler()
+        public IActionResult MultiRequestHAndler()
         {
-            return $"value of id ";
+            return Content( $"value of id ");
         }
 
-        [HttpGet("{id:int}/{value}")] //Adding int constarin to id
-        public string Get(int id, string value)
+        [HttpGet("{ids}")] //Adding int constarin to id
+        public IActionResult Get(int ids)
         {
-            return $"value of id {id} and value {value}";
+            return Ok($"value of id {ids} and value ");
         }
 
         // POST: api/Customer
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] CustomerData value)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return CreatedAtAction("Get", new { ids= value.id },value);
+
         }
 
         // PUT: api/Customer/5
@@ -49,5 +57,14 @@ namespace WebAPIService.Controller
         public void Delete(int id)
         {
         }
+    }
+
+    public class CustomerData
+    {
+        [Required]
+        [Range(1,int.MaxValue)]
+        public int id { get; set; }
+
+        public string Name { get; set; }
     }
 }

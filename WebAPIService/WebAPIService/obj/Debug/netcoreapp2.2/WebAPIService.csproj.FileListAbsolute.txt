@@ -1,0 +1,14 @@
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\bin\Debug\netcoreapp2.2\WebAPIService.deps.json
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\bin\Debug\netcoreapp2.2\WebAPIService.runtimeconfig.json
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\bin\Debug\netcoreapp2.2\WebAPIService.runtimeconfig.dev.json
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\bin\Debug\netcoreapp2.2\WebAPIService.dll
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\bin\Debug\netcoreapp2.2\WebAPIService.pdb
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.csprojAssemblyReference.cache
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.csproj.CoreCompileInputs.cache
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.RazorAssemblyInfo.cache
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.RazorAssemblyInfo.cs
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.AssemblyInfoInputs.cache
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.AssemblyInfo.cs
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.RazorTargetAssemblyInfo.cache
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.dll
+E:\Repo\WebAPIExample\WebAPIService\WebAPIService\obj\Debug\netcoreapp2.2\WebAPIService.pdb

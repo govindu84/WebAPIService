@@ -28,6 +28,7 @@ namespace WebAPIService.Controller
         }
 
         [HttpGet("{ids}")] //Adding int constarin to id
+        [Produces("application/xml")]
         public IActionResult Get(int ids)
         {
             return Ok($"value of id {ids} and value ");
